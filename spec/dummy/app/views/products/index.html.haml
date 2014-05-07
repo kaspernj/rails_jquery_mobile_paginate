@@ -1,0 +1,14 @@
+%h2= t(".filter")
+= search_form_for @search, :builder => SimpleForm::FormBuilder do |f|
+  = f.input :name_cont, :label => Product.human_attribute_name(:name)
+  = f.submit
+
+
+%h2= Product.model_name.human(:count => 2)
+
+%ul{:data => {:role => "listview"}}
+  - @products.each do |product|
+    %li
+      = link_to product.name, product_path(product)
+
+= jquery_mobile_paginate @products

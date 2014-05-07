@@ -1,0 +1,15 @@
+!!! 5
+%html
+  %head
+    %title Dummy
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    %div{:data => {:role => "page", :position => "fixed"}}
+      %div{:data => {:role => "header"}}
+        %h1 Rails JQM Paginate
+      %div.ui-content{:data => {:role => "main"}}
+        = yield
+      %div{:data => {:role => "footer", :position => "fixed"}}
+        Made by Kasper

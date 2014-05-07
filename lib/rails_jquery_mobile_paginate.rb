@@ -1,0 +1,2 @@
+module RailsJqueryMobilePaginate
+end
