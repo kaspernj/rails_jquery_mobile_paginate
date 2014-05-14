@@ -1,2 +1,4 @@
+require_relative "rails_jquery_mobile_paginate/helpers/paginate_helper"
+
 module RailsJqueryMobilePaginate
 end
